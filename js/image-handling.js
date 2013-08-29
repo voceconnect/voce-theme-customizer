@@ -4,7 +4,7 @@ jQuery(document).ready(function(){
   jQuery('.voce-theme-image-lib').each(function(){
     var $this = jQuery(this);
     new MediaModal(
-     {
+      {
         calling_selector : '#' + $this.attr('id'),
         cb : function(attachments){
           var attachment = attachments[0],
