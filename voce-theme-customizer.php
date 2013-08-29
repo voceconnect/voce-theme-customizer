@@ -3,7 +3,7 @@
   Plugin Name: Voce Theme Customizer
   Plugin URI: http://plugins.voceconnect.com
   Description: Theme Customizer
-  Version: 0.1
+  Version: 1.0
   Author: banderon
   License: GPL2
  */
