@@ -9,8 +9,8 @@
  */
 
 // Class can't be defined before WP_Customize_Image_Control
-add_action( 'plugins_loaded', function(){
-	if ( ! class_exists( 'WP_Customize_Image_Control' ) ) {
+add_action( 'plugins_loaded', function() {
+	if ( class_exists( 'WP_Customize_Image_Control' ) ) {
 		return;
 	}
 
@@ -126,5 +126,78 @@ add_action( 'plugins_loaded', function(){
 	}
 
 	Voce_Customize_Image_Control::init();
+
+}, 11 );
+
+// Class can't be defined before WP_Customize_Control
+add_action( 'plugins_loaded', function() {
+	if ( ! class_exists( 'WP_Customize_Control' ) ) {
+		return;
+	}
+
+	class Voce_Customize_Dropdown_Control extends WP_Customize_Control {
+
+		public $type = 'dropdown';
+		public $dropdown_opts = array();
+
+		/**
+		* Create a new Voce dropdown control
+		*/
+		public function __construct( $manager, $id, $args = array() ) {
+			parent::__construct( $manager, $id, $args );
+
+			if ( empty( $args['options'] ) || !is_array( $args['options'] ) ) {
+				$args['options'] = array();
+			}
+			$this->dropdown_opts = $args['options'];
+		}
+
+		public function render_content() {
+			if ( empty( $this->dropdown_opts ) ) {
+				return;
+			}
+
+			?>
+			<label class="voce-customize-dropdown">
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<select <?php $this->link(); ?>>
+					<?php
+					foreach ( $this->dropdown_opts as $val => $label ) {
+						printf( '<option value="%s" %s>%s</option>', esc_attr( $val ), selected( $val, $this->value() ), esc_html( $label ) );
+					}
+					?>
+				</select>
+			</label>
+			<?php
+		}
+	}
+
+}, 11 );
+
+
+// Class can't be defined before WP_Customize_Control
+add_action( 'plugins_loaded', function() {
+	if ( ! class_exists( 'WP_Customize_Control' ) ) {
+		return;
+	}
+
+	class Voce_Customize_Textarea_Control extends WP_Customize_Control {
+
+		public $type = 'textarea';
+
+		/**
+		* Create Voce Textarea control
+		*/
+		public function render_content() {
+			?>
+			<label class="voce-customize-textarea">
+				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<textarea class="large-text" rows="5" <?php $this->link(); ?>>
+					<?php echo esc_textarea( $this->value() ); ?>
+				</textarea>
+			</label>
+			<?php
+		}
+	}
 
 }, 11 );
