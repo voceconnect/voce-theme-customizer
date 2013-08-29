@@ -1,0 +1,3 @@
+[submodule "libs/wp-media-modal"]
+	path = libs/wp-media-modal
+	url = git@github.com:voceconnect/wp-media-modal.git
