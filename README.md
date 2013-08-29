@@ -1,7 +1,7 @@
 Voce Theme Customizer
 ===================
 Contributors: banderon  
-Tags: theme, customizer, image, media, library  
+Tags: theme, customizer, image, media, library, dropdown, textarea  
 Requires at least: 3.5.0  
 Tested up to: 3.6  
 Stable tag: 1.0  
@@ -33,7 +33,6 @@ add_action( 'customize_register', function( $wp_customize ) {
 	) );
 
 	$id = 'new_image';
-
 	$wp_customize->add_setting( $id );
 	$wp_customize->add_control( new Voce_Customize_Image_Control( $wp_customize, $id, array(
 		'label'    => 'My New Image',
@@ -54,9 +53,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'priority' => 30,
 	) );
 
-
 	$id = 'new_image';
-
 	$wp_customize->add_setting( $id );
 	$wp_customize->add_control( new Voce_Customize_Image_Control( $wp_customize, $id, array(
 		'label'         => 'My New Image',
@@ -78,7 +75,6 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'priority' => 30,
 	) );
 
-
 	$id1 = 'new_dropdown';
 	$opts = array(
 		'val1' => 'Value 1',
@@ -86,7 +82,6 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'val3' => 'Value 3',
 		'val4' => 'Value 4',
 	);
-
 	$wp_customize->add_setting( $id1 );
 	$wp_customize->add_control( new Voce_Customize_Dropdown_Control( $wp_customize, $id1, array(
 		'label'         => 'My New Dropdown',
@@ -95,9 +90,7 @@ add_action( 'customize_register', function( $wp_customize ) {
 		'options'       => $opts,
 	) ) );
 
-
 	$id2 = 'new_textarea';
-
 	$wp_customize->add_setting( $id2 );
 	$wp_customize->add_control( new Voce_Customize_Textarea_Control( $wp_customize, $id2, array(
 		'label'         => 'My New Textarea',
