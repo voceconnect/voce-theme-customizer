@@ -10,7 +10,7 @@
 
 // Class can't be defined before WP_Customize_Image_Control
 add_action( 'plugins_loaded', function() {
-	if ( class_exists( 'WP_Customize_Image_Control' ) ) {
+	if ( ! class_exists( 'WP_Customize_Image_Control' ) ) {
 		return;
 	}
 
