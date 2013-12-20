@@ -14,6 +14,6 @@
         "files": ["voce-theme-customizer.php"]
     },
     "require": {
-        "voceconnect/wp-media-modal": "~1.0.0"
+        "voceconnect/wp-media-modal": "~1.0"
     }
 }
