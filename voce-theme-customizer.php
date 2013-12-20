@@ -1,4 +1,5 @@
 <?php
+if ( !class_exists('Voce_Customize_Image_Control') ) {
 /*
   Plugin Name: Voce Theme Customizer
   Plugin URI: http://plugins.voceconnect.com
@@ -201,3 +202,5 @@ add_action( 'plugins_loaded', function() {
 	}
 
 } );
+
+} // End class check
