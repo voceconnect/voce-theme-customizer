@@ -9,7 +9,7 @@
  */
 
 // Class can't be defined before WP_Customize_Image_Control
-add_action( 'plugins_loaded', function() {
+add_action( 'init', function() {
 	if ( ! class_exists( 'WP_Customize_Image_Control' ) ) {
 		return;
 	}
@@ -31,7 +31,7 @@ add_action( 'plugins_loaded', function() {
 		public static function enqueue_admin_scripts() {
 			wp_enqueue_media();
 			wp_enqueue_script( 'voce-wp-media-modal' );
-			wp_enqueue_script( 'voce-theme-customizer', plugins_url( 'js/image-handling.js', __FILE__ ), array('media-modal'), false, true );
+			wp_enqueue_script( 'voce-theme-customizer', plugins_url( 'js/image-handling.js', __FILE__ ), array('voce-wp-media-modal'), false, true );
 		}
 
 		/**
@@ -200,4 +200,4 @@ add_action( 'plugins_loaded', function() {
 		}
 	}
 
-}, 11 );
+} );
