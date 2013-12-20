@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "a1af190cdda89111433b682c45bd6cd6",
+    "packages": [
+        {
+            "name": "voceconnect/wp-media-modal",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/voceconnect/wp-media-modal.git",
+                "reference": "6b8b666e3b1827f57138bc64b4094f3c5b0e888f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/voceconnect/wp-media-modal/zipball/6b8b666e3b1827f57138bc64b4094f3c5b0e888f",
+                "reference": "6b8b666e3b1827f57138bc64b4094f3c5b0e888f",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "wp-media-modal.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPLv2+"
+            ],
+            "authors": [
+                {
+                    "name": "Gary Smirny",
+                    "email": "gary@voceconnect.com"
+                },
+                {
+                    "name": "Chris, Scott",
+                    "email": "cscott@voceconnect.com"
+                }
+            ],
+            "description": "Creates a modal window for media selection in WordPress 3.5+",
+            "keywords": [
+                "media",
+                "modal",
+                "wordpress"
+            ],
+            "time": "2013-12-20 19:30:20"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "stable",
+    "stability-flags": [
+
+    ],
+    "platform": [
+
+    ],
+    "platform-dev": [
+
+    ]
+}
