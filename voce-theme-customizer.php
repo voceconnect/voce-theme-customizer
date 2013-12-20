@@ -17,7 +17,7 @@ add_action( 'plugins_loaded', function() {
 	class Voce_Customize_Image_Control extends WP_Customize_Image_Control {
 
 		/**
-		 * Bootstrap plugin 
+		 * Bootstrap plugin
 		 */
 		public static function init() {
 			add_action( 'customize_controls_enqueue_scripts', array( __CLASS__, 'enqueue_admin_scripts' ) );
@@ -26,16 +26,16 @@ add_action( 'plugins_loaded', function() {
 		}
 
 		/**
-		 * Enqueue the necessary scripts 
+		 * Enqueue the necessary scripts
 		 */
 		public static function enqueue_admin_scripts() {
 			wp_enqueue_media();
-			wp_enqueue_script( 'media-modal', plugins_url( 'libs/wp-media-modal/wp-media-modal.js', __FILE__ ), false, false, true );
+			wp_enqueue_script( 'voce-wp-media-modal' );
 			wp_enqueue_script( 'voce-theme-customizer', plugins_url( 'js/image-handling.js', __FILE__ ), array('media-modal'), false, true );
 		}
 
 		/**
-		 * Print the CSS required to make media modal work on customizer page 
+		 * Print the CSS required to make media modal work on customizer page
 		 */
 		public static function print_customizer_styles() {
 			?>
@@ -80,12 +80,12 @@ add_action( 'plugins_loaded', function() {
 		}
 
 		/**
-		 * Define method to prevent parent's method from being invoked 
+		 * Define method to prevent parent's method from being invoked
 		 */
 		public function prepare_control() {}
 
 		/**
-		 * Render control 
+		 * Render control
 		 */
 		public function render_content() {
 			$src = $this->value();
