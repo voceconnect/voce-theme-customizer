@@ -7,6 +7,14 @@
         {
             "name": "Gary Smirny",
             "email": "gary@voceconnect.com"
+        },
+        {
+            "name": "Curtis Loisel",
+            "email": "curtis@voceconnect.com"
+        },
+        {
+            "name": "Jeff Stieler",
+            "email": "jeff@voceconnect.com"
         }
     ],
     "type": "library",
