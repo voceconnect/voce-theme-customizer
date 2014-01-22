@@ -1,19 +1,17 @@
 <?php
-if ( !class_exists('Voce_Customize_Image_Control') ) {
 /*
   Plugin Name: Voce Theme Customizer
   Plugin URI: http://plugins.voceconnect.com
   Description: Theme Customizer
-  Version: 1.0
-  Author: banderon
+  Version: 1.1
+  Author: banderon, csloisel, jeffstieler
   License: GPL2
  */
 
 // Class can't be defined before WP_Customize_Image_Control
+if ( class_exists( 'WP_Customize_Image_Control' ) && ! class_exists( 'Voce_Customize_Image_Control' ) ) :
+
 add_action( 'init', function() {
-	if ( ! class_exists( 'WP_Customize_Image_Control' ) ) {
-		return;
-	}
 
 	class Voce_Customize_Image_Control extends WP_Customize_Image_Control {
 
@@ -130,11 +128,12 @@ add_action( 'init', function() {
 
 }, 11 );
 
+endif;
+
 // Class can't be defined before WP_Customize_Control
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Voce_Customize_Dropdown_Control' ) ) :
+
 add_action( 'plugins_loaded', function() {
-	if ( ! class_exists( 'WP_Customize_Control' ) ) {
-		return;
-	}
 
 	class Voce_Customize_Dropdown_Control extends WP_Customize_Control {
 
@@ -175,12 +174,13 @@ add_action( 'plugins_loaded', function() {
 
 }, 11 );
 
+endif;
+
 
 // Class can't be defined before WP_Customize_Control
+if ( class_exists( 'WP_Customize_Control' ) && ! class_exists( 'Voce_Customize_Textarea_Control' ) ) :
+
 add_action( 'plugins_loaded', function() {
-	if ( ! class_exists( 'WP_Customize_Control' ) ) {
-		return;
-	}
 
 	class Voce_Customize_Textarea_Control extends WP_Customize_Control {
 
@@ -203,4 +203,4 @@ add_action( 'plugins_loaded', function() {
 
 } );
 
-} // End class check
+endif;
