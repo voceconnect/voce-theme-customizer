@@ -23,6 +23,6 @@
     },
     "require": {
         "voceconnect/wp-media-modal": "~1.0",
-        "voceconnect/post-selection-ui": "~1.2"
+        "voceconnect/post-selection-ui": "~1.2.4"
     }
 }

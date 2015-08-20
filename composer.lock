@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "ed6c020d1cf272ae7eae9de67479408b",
+    "hash": "e8583743d69bf4a7fe795ce8266e7d21",
     "packages": [
         {
             "name": "voceconnect/post-selection-ui",
