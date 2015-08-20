@@ -15,6 +15,11 @@
         {
             "name": "Jeff Stieler",
             "email": "jeff@voceconnect.com"
+        },
+        ,
+        {
+            "name": "Kevin Langley",
+            "email": "me@kevinlangleyjr.com"
         }
     ],
     "type": "library",
@@ -22,6 +27,7 @@
         "files": ["voce-theme-customizer.php"]
     },
     "require": {
-        "voceconnect/wp-media-modal": "~1.0"
+        "voceconnect/wp-media-modal": "~1.0",
+        "voceconnect/post-selection-ui": "~1.2.4"
     }
 }
