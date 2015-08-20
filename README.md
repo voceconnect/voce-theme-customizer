@@ -4,7 +4,7 @@ Contributors: banderon
 Tags: theme, customizer, image, media, library, dropdown, textarea  
 Requires at least: 3.5.0  
 Tested up to: 3.6  
-Stable tag: 1.0.6
+Stable tag: 1.0.7
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,6 +14,7 @@ Adds several Theme Customizer controls.
 - An image selector that uses the Media Library, saving either the image source (as WordPress currently does) or the image ID
 - A dropdown
 - A textarea
+- A [Post Selection UI](https://github.com/voceconnect/post-selection-ui)
 
 ## Installation
 
@@ -106,6 +107,9 @@ add_action( 'customize_register', function( $wp_customize ) {
 Image Control: ```output_format``` - specifies whether to save the ```src``` (default) or the ```id``` of the image
 
 Dropdown Control: ```options``` - an array with which to populate the dropdown
+
+**1.0.7**  
+*Adding Post Selection UI control.*
 
 **1.0**  
 *Initial version.*
