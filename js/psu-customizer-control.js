@@ -1,7 +1,7 @@
 ( function( api, $ ) {
 	api.controlConstructor.psu = api.Control.extend( {
 		ready: function() {
-			control = this
+			control = this;
 
 			$psuBox = control.container.find('.psu-box');
 			$psuBox.post_selection_ui();
