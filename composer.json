@@ -15,6 +15,11 @@
         {
             "name": "Jeff Stieler",
             "email": "jeff@voceconnect.com"
+        },
+        ,
+        {
+            "name": "Kevin Langley",
+            "email": "me@kevinlangleyjr.com"
         }
     ],
     "type": "library",
