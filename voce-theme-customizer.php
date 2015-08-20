@@ -242,7 +242,7 @@ add_action( 'init', function() {
 			$value = explode(',', $this->value());
 			$psu_args = array_merge( array( 'selected' => $value ), $this->psu_args );
 			?>
-			<label class="voce-customize-psu_args">
+			<label class="voce-customize-psu">
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
 				<?php echo post_selection_ui( $this->id, $psu_args ); ?>
 			</label>
