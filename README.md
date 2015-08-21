@@ -108,6 +108,9 @@ Image Control: ```output_format``` - specifies whether to save the ```src``` (de
 
 Dropdown Control: ```options``` - an array with which to populate the dropdown
 
+**1.1.1**  
+*Fixing save issue when multiple Post Selection UI controls are used.*
+
 **1.1**  
 *Adding Post Selection UI control.*
 
