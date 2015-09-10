@@ -4,7 +4,7 @@ Contributors: banderon, kevinlangleyjr
 Tags: theme, customizer, image, media, library, dropdown, textarea  
 Requires at least: 3.5.0  
 Tested up to: 3.6  
-Stable tag: 1.1
+Stable tag: 1.2
 License: GPLv2 or later  
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -107,6 +107,9 @@ add_action( 'customize_register', function( $wp_customize ) {
 Image Control: ```output_format``` - specifies whether to save the ```src``` (default) or the ```id``` of the image
 
 Dropdown Control: ```options``` - an array with which to populate the dropdown
+
+**1.2**  
+*Better autoload handling to allow for unit testing and analysis of code coverage of theme that uses plugin as a dependency.*
 
 **1.1.1**  
 *Fixing save issue when multiple Post Selection UI controls are used.*
