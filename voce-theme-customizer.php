@@ -3,7 +3,7 @@
   Plugin Name: Voce Theme Customizer
   Plugin URI: http://plugins.voceconnect.com
   Description: Theme Customizer
-  Version: 1.2
+  Version: 1.2.1
   Author: banderon, csloisel, jeffstieler, kevinlangleyjr
   License: GPL2
  */
@@ -15,7 +15,7 @@ if( defined('ABSPATH') && !function_exists( 'voce_theme_customizer_init' ) ) {
 			foreach( $files as $file ){
 				$class = basename( $file );
 
-				if( !class_exists( $class ) ){
+				if( ! class_exists( $class ) && 0 === validate_file( $file ) ) {
 					require_once $file;
 				}
 			}
