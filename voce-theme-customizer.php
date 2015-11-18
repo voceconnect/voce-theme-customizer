@@ -15,7 +15,7 @@ if( defined('ABSPATH') && !function_exists( 'voce_theme_customizer_init' ) ) {
 			foreach( $files as $file ){
 				$class = basename( $file );
 
-				if( !class_exists( $class ) ){
+				if( ! class_exists( $class ) && 0 === validate_file( $file ) ) {
 					require_once $file;
 				}
 			}
